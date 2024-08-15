@@ -1,5 +1,13 @@
-import Image from "next/image";
+import { Categories, Container, Title } from "@/components/shared";
 
 export default function Home() {
-  return <h1>home</h1>;
+  return (
+    <>
+      <Container className="mt-8">
+        <Title text="Все запчасти" size="lg" className="font-extrabold" />
+
+        <Categories />
+      </Container>
+    </>
+  );
 }
