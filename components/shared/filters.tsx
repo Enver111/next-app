@@ -4,6 +4,7 @@ import { FilterCheckbox } from "./filter-checkbox";
 import { Input } from "../ui";
 import { RangeSlider } from "./range-slider";
 import { ComboboxDemo } from "./combobox";
+import { CheckboxFiltersGroup } from "./checkbox-filter-group";
 
 interface Props {
   className?: string;
@@ -13,6 +14,13 @@ export const Filters: React.FC<Props> = ({ className }) => {
   return (
     <div className={className}>
       <Title text="Фильтрация" size="sm" className="mb-5 font-bold" />
+
+      <div className="mt-5 border-b border-y-neutral-100 ">
+        <p className="font-bold mb-3">Поиск по VIN</p>
+        <div className="flex gap-3 mb-5">
+          <Input type="text" placeholder="Введите код запчасти" />
+        </div>
+      </div>
 
       <div className="mt-5 border-b border-y-neutral-100">
         <p className="font-bold mb-3">Марка авто</p>
@@ -42,12 +50,30 @@ export const Filters: React.FC<Props> = ({ className }) => {
 
         <RangeSlider min={0} max={30000} step={10} value={[0, 30000]} />
       </div>
-      <div className="mt-5 border-b border-y-neutral-100 py-6 pb-7">
-        <p className="font-bold mb-3">Поиск по VIN</p>
-        <div className="flex gap-3 mb-5">
-          <Input type="text" placeholder="Введите код запчасти" />
-        </div>
-      </div>
+
+      <CheckboxFiltersGroup
+        title="Производитель"
+        className="mt-5"
+        limit={6}
+        defaultItems={[
+          { text: "Германия", value: "1" },
+          { text: "Корея", value: "2" },
+          { text: "Китай", value: "3" },
+          { text: "Франция", value: "4" },
+          { text: "Испания", value: "5" },
+          { text: "Италия", value: "6" },
+          { text: "Америка", value: "7" },
+        ]}
+        items={[
+          { text: "Германия", value: "1" },
+          { text: "Корея", value: "2" },
+          { text: "Китай", value: "3" },
+          { text: "Франция", value: "4" },
+          { text: "Испания", value: "5" },
+          { text: "Италия", value: "6" },
+          { text: "Америка", value: "7" },
+        ]}
+      />
     </div>
   );
 };
