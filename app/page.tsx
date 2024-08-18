@@ -6,6 +6,8 @@ import {
   Title,
   TopBar,
 } from "@/components/shared";
+import { ProductCard } from "@/components/shared/product-card";
+import { ProductGroupList } from "@/components/shared/products-group-list";
 
 export default function Home() {
   return (
@@ -16,7 +18,7 @@ export default function Home() {
       <TopBar />
 
       <Container className="mt-10 pb-14">
-        <div className="flex gap-[60px]">
+        <div className="flex gap-[80px]">
           {/* Фильтрация */}
           <div className="w-[250px]">
             <Filters />
@@ -24,7 +26,150 @@ export default function Home() {
 
           {/* Список Товаров */}
           <div className="flex-1">
-            <div className="flex flex-col gap-16">Список товаров</div>
+            <div className="flex flex-col gap-16">
+              <ProductGroupList
+                title="Двигатели"
+                items={[
+                  {
+                    id: 1,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://60.img.avito.st/image/1/1.ySf3Yra4Zc7By6fL6TnqOs3DZ8hJw-fGgcZnzEfLbcRB.iZ56UsmkpyeguGRCHk8z30IFlGyR98OdAtlj77dv9Gc",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 2,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://60.img.avito.st/image/1/1.ySf3Yra4Zc7By6fL6TnqOs3DZ8hJw-fGgcZnzEfLbcRB.iZ56UsmkpyeguGRCHk8z30IFlGyR98OdAtlj77dv9Gc",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 3,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://80.img.avito.st/image/1/1.afKyGba4xRuEsAce7Ggelda7xx0MuEcTxL3HGQKwzREE.ashlX0K_CJjZeFreL2H0TDAo7S2WbhdDoUWulTbyohI",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 3,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://90.img.avito.st/image/1/1.GtIzDba4tjsFpHQ-Czlh2DKvtD2NrDQzRam0OYOkvjGF.QVX94X3ELlOWN_0bCDUU8YLh7CpsiDik7-Y3khds9Gs",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 3,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://60.img.avito.st/image/1/1.ySf3Yra4Zc7By6fL6TnqOs3DZ8hJw-fGgcZnzEfLbcRB.iZ56UsmkpyeguGRCHk8z30IFlGyR98OdAtlj77dv9Gc",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 3,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://60.img.avito.st/image/1/1.ySf3Yra4Zc7By6fL6TnqOs3DZ8hJw-fGgcZnzEfLbcRB.iZ56UsmkpyeguGRCHk8z30IFlGyR98OdAtlj77dv9Gc",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 3,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://60.img.avito.st/image/1/1.ySf3Yra4Zc7By6fL6TnqOs3DZ8hJw-fGgcZnzEfLbcRB.iZ56UsmkpyeguGRCHk8z30IFlGyR98OdAtlj77dv9Gc",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 3,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://60.img.avito.st/image/1/1.ySf3Yra4Zc7By6fL6TnqOs3DZ8hJw-fGgcZnzEfLbcRB.iZ56UsmkpyeguGRCHk8z30IFlGyR98OdAtlj77dv9Gc",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                ]}
+                categoryId={1}
+                listClassName={""}
+              />
+              <ProductGroupList
+                title="Сцепление"
+                items={[
+                  {
+                    id: 1,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://60.img.avito.st/image/1/1.ySf3Yra4Zc7By6fL6TnqOs3DZ8hJw-fGgcZnzEfLbcRB.iZ56UsmkpyeguGRCHk8z30IFlGyR98OdAtlj77dv9Gc",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 2,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://60.img.avito.st/image/1/1.ySf3Yra4Zc7By6fL6TnqOs3DZ8hJw-fGgcZnzEfLbcRB.iZ56UsmkpyeguGRCHk8z30IFlGyR98OdAtlj77dv9Gc",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 3,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://80.img.avito.st/image/1/1.afKyGba4xRuEsAce7Ggelda7xx0MuEcTxL3HGQKwzREE.ashlX0K_CJjZeFreL2H0TDAo7S2WbhdDoUWulTbyohI",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 3,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://90.img.avito.st/image/1/1.GtIzDba4tjsFpHQ-Czlh2DKvtD2NrDQzRam0OYOkvjGF.QVX94X3ELlOWN_0bCDUU8YLh7CpsiDik7-Y3khds9Gs",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 3,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://60.img.avito.st/image/1/1.ySf3Yra4Zc7By6fL6TnqOs3DZ8hJw-fGgcZnzEfLbcRB.iZ56UsmkpyeguGRCHk8z30IFlGyR98OdAtlj77dv9Gc",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 3,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://60.img.avito.st/image/1/1.ySf3Yra4Zc7By6fL6TnqOs3DZ8hJw-fGgcZnzEfLbcRB.iZ56UsmkpyeguGRCHk8z30IFlGyR98OdAtlj77dv9Gc",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 3,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://60.img.avito.st/image/1/1.ySf3Yra4Zc7By6fL6TnqOs3DZ8hJw-fGgcZnzEfLbcRB.iZ56UsmkpyeguGRCHk8z30IFlGyR98OdAtlj77dv9Gc",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                  {
+                    id: 3,
+                    name: "Двигатель новый cpwa 1.4 TSI",
+                    imageUrl:
+                      "https://60.img.avito.st/image/1/1.ySf3Yra4Zc7By6fL6TnqOs3DZ8hJw-fGgcZnzEfLbcRB.iZ56UsmkpyeguGRCHk8z30IFlGyR98OdAtlj77dv9Gc",
+                    price: 1250,
+                    items: [{ price: 1250 }],
+                  },
+                ]}
+                categoryId={1}
+                listClassName={""}
+              />
+            </div>
           </div>
         </div>
       </Container>
