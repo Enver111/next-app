@@ -12,10 +12,15 @@ interface Props {
 export const Header: React.FC<Props> = ({ className }) => {
   return (
     <header className={cn("border border-b", className)}>
-      <Container className="flex items-center justify-between py-8">
+      <Container className="flex items-center justify-between py-6">
         <div className="flex items-center gap-1">
-          <Image src="/icons/logo.svg" alt="Logo" width={40} height={40} />
-          <h1 className="text-2xl uppercase font-black">Glamly</h1>
+          <Image src="/icons/logo.svg" alt="Logo" width={60} height={40} />
+          <div>
+            <h1 className="text-2xl uppercase font-black">Glamly</h1>
+            <p className="text-xs uppercase font-black">
+              магазин автозапчастей
+            </p>
+          </div>
         </div>
 
         {/* правая часть */}
