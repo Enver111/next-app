@@ -141,8 +141,8 @@ const frameworks = [
     label: "Skoda",
   },
   {
-    value: "Ssang Yong",
-    label: "Ssang Yong",
+    value: "Sang Yong",
+    label: "Sang Yong",
   },
   {
     value: "Subaru",
