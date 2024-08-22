@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { useCategoryStore } from "@/store/category";
+import { icons } from "lucide-react";
 import React from "react";
 
 interface Props {
@@ -9,11 +10,31 @@ interface Props {
 }
 
 const cats = [
-  { id: 1, name: "Мототехника" },
-  { id: 2, name: "Легковые авто" },
-  { id: 3, name: "Грузовики" },
-  { id: 4, name: "Спецтехника" },
-  { id: 5, name: "Водная техника" },
+  {
+    id: 1,
+    name: "Мототехника",
+    icons: "https://baza.drom.ru/resources/img/drom_moto_icon.svg",
+  },
+  {
+    id: 2,
+    name: "Легковые авто",
+    icons: "https://baza.drom.ru/resources/img/drom_car_icon.svg",
+  },
+  {
+    id: 3,
+    name: "Грузовики",
+    icons: "	https://baza.drom.ru/resources/img/drom_spec_icon.svg",
+  },
+  {
+    id: 4,
+    name: "Спецтехника",
+    icons: "	https://baza.drom.ru/resources/img/drom_spec_icon.svg",
+  },
+  {
+    id: 5,
+    name: "Водная техника",
+    icons: "https://baza.drom.ru/resources/img/drom_boat_icon.svg",
+  },
 ];
 
 export const Categories: React.FC<Props> = ({ className }) => {
@@ -23,16 +44,17 @@ export const Categories: React.FC<Props> = ({ className }) => {
     <div
       className={cn("inline-flex gap-1 bg-gray-50 p-1 rounded-2xl", className)}
     >
-      {cats.map(({ name, id }, index) => (
+      {cats.map(({ icons, name, id }, index) => (
         <a
           className={cn(
-            "flex items-center font-bold h-11 rounded-2xl px-5",
+            "flex items-center gap-3 font-bold h-11 rounded-2xl px-5",
             categoryActiveId === id &&
               "bg-white shadow-md shadow-gray-200 text-primary"
           )}
           href={`/#${name}`}
           key={index}
         >
+          <img className="w-7" src={icons} alt="moto" />
           <button>{name}</button>
         </a>
       ))}
