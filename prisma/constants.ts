@@ -19,13 +19,11 @@ export const user = [
 ];
 
 export const categories = [
-  { name: "Двигатель" },
-  { name: "Сцепление" },
-  { name: "Трансмиссия" },
-  { name: "Подвеска" },
-  { name: "Колеса" },
-  { name: "Кузов" },
-  { name: "Электрика" },
+  { name: "Мототехника" },
+  { name: "Легковые авто" },
+  { name: "Грузовики" },
+  { name: "Спецткхника" },
+  { name: "Водная техника" },
 ];
 
 export const manufacturer = [
@@ -88,49 +86,43 @@ export const manufacturer = [
 // марка автомобиля
 export const product = [
   {
-    name: "Alfa Romeo",
+    name: "Двигатель",
     categoryId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
   {
-    name: "Audi",
+    name: "Сцепление",
     categoryId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
   {
-    name: "Bentley",
+    name: "Трансмиссия",
     categoryId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
   {
-    name: "BMW",
+    name: "Подвеска",
     categoryId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
   {
-    name: "Chevrolet",
+    name: "Колеса",
     categoryId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
   {
-    name: "Chrysler",
+    name: "Кузов",
     categoryId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
   {
-    name: "Citroen",
-    categoryId: 1,
-    imageUrl:
-      "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-  },
-  {
-    name: "Daewoo",
+    name: "Электрика",
     categoryId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
