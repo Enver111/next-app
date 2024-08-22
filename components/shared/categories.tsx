@@ -9,13 +9,11 @@ interface Props {
 }
 
 const cats = [
-  { id: 1, name: "Двигатель" },
-  { id: 2, name: "Сцепление" },
-  { id: 3, name: "Трансмиссия" },
-  { id: 4, name: "Подвеска" },
-  { id: 5, name: "Колеса" },
-  { id: 6, name: "Кузов" },
-  { id: 7, name: "Электрика" },
+  { id: 1, name: "Мототехника" },
+  { id: 2, name: "Легковые авто" },
+  { id: 3, name: "Грузовики" },
+  { id: 4, name: "Спецтехника" },
+  { id: 5, name: "Водная техника" },
 ];
 
 export const Categories: React.FC<Props> = ({ className }) => {
