@@ -83,7 +83,6 @@ export const manufacturer = [
   },
 ].map((obj, index) => ({ id: index + 1, ...obj }));
 
-// марка автомобиля
 export const product = [
   {
     name: "Двигатель",
