@@ -7,6 +7,7 @@ import { RangeSlider } from "./range-slider";
 import { ComboboxDemo } from "./combobox";
 import { CheckboxFiltersGroup } from "./checkbox-filter-group";
 import { useFilterProductState } from "@/hooks/useFilterProductState";
+import { useFilterManufacturer } from "@/hooks/useFilterManufacturer";
 
 interface Props {
   className?: string;
@@ -14,8 +15,14 @@ interface Props {
 
 export const Filters: React.FC<Props> = ({ className }) => {
   const { productState, loading } = useFilterProductState();
+  const { manufacturer } = useFilterManufacturer();
 
   const items = productState.map((item) => ({
+    value: String(item.id),
+    text: item.name,
+  }));
+
+  const manufacturerItems = manufacturer.map((item) => ({
     value: String(item.id),
     text: item.name,
   }));
@@ -59,6 +66,15 @@ export const Filters: React.FC<Props> = ({ className }) => {
         </div>
 
         <RangeSlider min={0} max={30000} step={10} value={[0, 30000]} />
+      </div>
+      <div className="mt-5 flex flex-col gap-4">
+        <CheckboxFiltersGroup
+          title="Производитель"
+          limit={6}
+          defaultItems={manufacturerItems.slice(0, 6)}
+          items={manufacturerItems}
+          loading={loading}
+        />
       </div>
     </div>
   );
