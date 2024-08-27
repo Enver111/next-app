@@ -26,6 +26,8 @@ export const categories = [
   { name: "Водная техника" },
 ];
 
+export const states = [{ name: "Все" }, { name: "Новый" }, { name: "Б/У" }];
+
 export const manufacturer = [
   {
     name: "Brembo",
@@ -87,42 +89,49 @@ export const product = [
   {
     name: "Двигатель",
     categoryId: 1,
+    stateId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
   {
     name: "Сцепление",
     categoryId: 1,
+    stateId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
   {
     name: "Трансмиссия",
     categoryId: 1,
+    stateId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
   {
     name: "Подвеска",
     categoryId: 1,
+    stateId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
   {
     name: "Колеса",
     categoryId: 1,
+    stateId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
   {
     name: "Кузов",
     categoryId: 1,
+    stateId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
   {
     name: "Электрика",
     categoryId: 1,
+    stateId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },

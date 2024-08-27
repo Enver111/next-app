@@ -1,4 +1,4 @@
-import { categories, manufacturer, product, user } from "./constants";
+import { categories, manufacturer, product, states, user } from "./constants";
 import { prisma } from "./prisma-client";
 
 const randomDecimalNamber = (min: number, max: number) => {
@@ -14,19 +14,23 @@ async function up() {
     data: categories,
   });
 
+  await prisma.productState.createMany({
+    data: states,
+  });
+
   await prisma.manufacturer.createMany({
     data: manufacturer,
   });
   await prisma.product.createMany({
     data: product,
   });
-
   const sparePart1 = await prisma.product.create({
     data: {
       name: "Двигатель TSI",
       imageUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlUbHZBMS-plDq40MbcmZYf2v9VQCcMJ000A&s",
       categoryId: 1,
+      stateId: 1,
       manufacturer: {
         connect: manufacturer.slice(0, 5),
       },
@@ -38,6 +42,7 @@ async function up() {
       imageUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlUbHZBMS-plDq40MbcmZYf2v9VQCcMJ000A&s",
       categoryId: 1,
+      stateId: 1,
       manufacturer: {
         connect: manufacturer.slice(5, 10),
       },
@@ -49,6 +54,7 @@ async function up() {
       imageUrl:
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlUbHZBMS-plDq40MbcmZYf2v9VQCcMJ000A&s",
       categoryId: 1,
+      stateId: 1,
       manufacturer: {
         connect: manufacturer.slice(10, 40),
       },
@@ -119,7 +125,9 @@ async function down() {
   await prisma.$executeRaw`TRUNCATE TABLE "Manufacturer" RESTART IDENTITY CASCADE`;
   await prisma.$executeRaw`TRUNCATE TABLE "Cart" RESTART IDENTITY CASCADE`;
   await prisma.$executeRaw`TRUNCATE TABLE "CartItem" RESTART IDENTITY CASCADE`;
+  await prisma.$executeRaw`TRUNCATE TABLE "ProductState" RESTART IDENTITY CASCADE`;
 }
+
 async function main() {
   try {
     await down();
