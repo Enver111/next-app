@@ -1,4 +1,11 @@
-import { categories, manufacturer, product, states, user } from "./constants";
+import {
+  brands,
+  categories,
+  manufacturer,
+  product,
+  states,
+  user,
+} from "./constants";
 import { prisma } from "./prisma-client";
 
 const randomDecimalNamber = (min: number, max: number) => {
@@ -13,6 +20,9 @@ async function up() {
   await prisma.category.createMany({
     data: categories,
   });
+  await prisma.brand.createMany({
+    data: brands,
+  });
 
   await prisma.productState.createMany({
     data: states,
@@ -24,6 +34,7 @@ async function up() {
   await prisma.product.createMany({
     data: product,
   });
+
   const sparePart1 = await prisma.product.create({
     data: {
       name: "Двигатель TSI",
@@ -31,6 +42,7 @@ async function up() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlUbHZBMS-plDq40MbcmZYf2v9VQCcMJ000A&s",
       categoryId: 1,
       stateId: 1,
+      brandId: 1,
       manufacturer: {
         connect: manufacturer.slice(0, 5),
       },
@@ -43,6 +55,7 @@ async function up() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlUbHZBMS-plDq40MbcmZYf2v9VQCcMJ000A&s",
       categoryId: 1,
       stateId: 1,
+      brandId: 2,
       manufacturer: {
         connect: manufacturer.slice(5, 10),
       },
@@ -55,6 +68,7 @@ async function up() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlUbHZBMS-plDq40MbcmZYf2v9VQCcMJ000A&s",
       categoryId: 1,
       stateId: 1,
+      brandId: 3,
       manufacturer: {
         connect: manufacturer.slice(10, 40),
       },
@@ -126,6 +140,7 @@ async function down() {
   await prisma.$executeRaw`TRUNCATE TABLE "Cart" RESTART IDENTITY CASCADE`;
   await prisma.$executeRaw`TRUNCATE TABLE "CartItem" RESTART IDENTITY CASCADE`;
   await prisma.$executeRaw`TRUNCATE TABLE "ProductState" RESTART IDENTITY CASCADE`;
+  await prisma.$executeRaw`TRUNCATE TABLE "Brand" RESTART IDENTITY CASCADE`;
 }
 
 async function main() {

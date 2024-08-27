@@ -28,6 +28,45 @@ export const categories = [
 
 export const states = [{ name: "Все" }, { name: "Новый" }, { name: "Б/У" }];
 
+export const brands = [
+  { name: "Alfa Romeo" },
+  { name: "Audi" },
+  { name: "Bentley" },
+  { name: "BMW" },
+  { name: "Chevrolet" },
+  { name: "Chrysler" },
+  { name: "Citroen" },
+  { name: "Daewoo" },
+  { name: "Fiat" },
+  { name: "Ford" },
+  { name: "Honda" },
+  { name: "Hyundai" },
+  { name: "Infiniti" },
+  { name: "Jaguar" },
+  { name: "Jeep" },
+  { name: "Kia" },
+  { name: "Lada" },
+  { name: "Land Rover" },
+  { name: "Lexus" },
+  { name: "Mazda" },
+  { name: "Mercedes Benz" },
+  { name: "Mitsubishi" },
+  { name: "Nissan" },
+  { name: "Opel" },
+  { name: "Peugeot" },
+  { name: "Porsche" },
+  { name: "Renault" },
+  { name: "Saab" },
+  { name: "Seat" },
+  { name: "Skoda" },
+  { name: "Sang Yong" },
+  { name: "Subaru" },
+  { name: "Suzuki" },
+  { name: "Toyota" },
+  { name: "Volkswagen" },
+  { name: "Volvo" },
+];
+
 export const manufacturer = [
   {
     name: "Brembo",
@@ -90,6 +129,7 @@ export const product = [
     name: "Двигатель",
     categoryId: 1,
     stateId: 1,
+    brandId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
@@ -97,6 +137,7 @@ export const product = [
     name: "Сцепление",
     categoryId: 1,
     stateId: 1,
+    brandId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
@@ -104,6 +145,7 @@ export const product = [
     name: "Трансмиссия",
     categoryId: 1,
     stateId: 1,
+    brandId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
@@ -111,6 +153,7 @@ export const product = [
     name: "Подвеска",
     categoryId: 1,
     stateId: 1,
+    brandId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
@@ -118,6 +161,7 @@ export const product = [
     name: "Колеса",
     categoryId: 1,
     stateId: 1,
+    brandId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
@@ -125,6 +169,7 @@ export const product = [
     name: "Кузов",
     categoryId: 1,
     stateId: 1,
+    brandId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
@@ -132,277 +177,8 @@ export const product = [
     name: "Электрика",
     categoryId: 1,
     stateId: 1,
+    brandId: 1,
     imageUrl:
       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
   },
 ];
-// export const autoModel = [
-//   {
-//     name: "Alfa Romeo",
-//     price: 186,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Audi",
-//     price: 122,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Bentley",
-//     price: 186,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "BMW",
-//     price: 156,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Chevrolet",
-//     price: 146,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Chrysler",
-//     price: 167,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Citroen",
-//     price: 190,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Daewoo",
-//     price: 134,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Fiat",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Ford",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Honda",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Hyundai",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Infiniti",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Jaguar",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Jeep",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Kia",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Lada",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Land Rover",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Lexus",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Mazda",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Mercedes Benz",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Mitsubishi",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Nissan",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Opel",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Peugeot",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Porsche",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Renault",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Saab",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Seat",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Skoda",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Sang Yong",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Subaru",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Suzuki",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Toyota",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Volkswagen",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Volvo",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-//   {
-//     name: "Skoda",
-//     price: 166,
-//     imageUrl:
-//       "https://upload.wikimedia.org/wikipedia/ru/thumb/2/24/Alfa_Romeo.svg/2048px-Alfa_Romeo.svg.png",
-//   },
-// ].map((obj, index) => ({ id: index + 1, ...obj }));
-
-// страна производителя
-// export const countryOfOrigin = [
-//   {
-//     name: "Германия",
-//     price: 186,
-//     imageUrl:
-//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNIiRc3fInWBJ6iLOYpmGIdJb_qe8CUpz80g&s",
-//   },
-//   {
-//     name: "Корея",
-//     price: 122,
-//     imageUrl:
-//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNIiRc3fInWBJ6iLOYpmGIdJb_qe8CUpz80g&s",
-//   },
-//   {
-//     name: "Китай",
-//     price: 186,
-//     imageUrl:
-//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNIiRc3fInWBJ6iLOYpmGIdJb_qe8CUpz80g&s",
-//   },
-//   {
-//     name: "Франция",
-//     price: 156,
-//     imageUrl:
-//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNIiRc3fInWBJ6iLOYpmGIdJb_qe8CUpz80g&s",
-//   },
-//   {
-//     name: "Испания",
-//     price: 146,
-//     imageUrl:
-//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNIiRc3fInWBJ6iLOYpmGIdJb_qe8CUpz80g&s",
-//   },
-//   {
-//     name: "Италия",
-//     price: 167,
-//     imageUrl:
-//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNIiRc3fInWBJ6iLOYpmGIdJb_qe8CUpz80g&s",
-//   },
-//   {
-//     name: "Америка",
-//     price: 190,
-//     imageUrl:
-//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNIiRc3fInWBJ6iLOYpmGIdJb_qe8CUpz80g&s",
-//   },
-// ].map((obj, index) => ({ id: index + 1, ...obj }));

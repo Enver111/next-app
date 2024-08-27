@@ -37,6 +37,24 @@ model Category {
     updatedAt DateTime @updatedAt
 }
 
+model Brand {
+    id       Int       @id @default(autoincrement())
+    name     String
+    products Product[]
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model ProductState {
+    id       Int       @id @default(autoincrement())
+    name     String
+    products Product[]
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
 model Product {
     id Int @id @default(autoincrement())
 
@@ -49,17 +67,11 @@ model Product {
     state   ProductState @relation(fields: [stateId], references: [id])
     stateId Int
 
+    brand   Brand @relation(fields: [brandId], references: [id])
+    brandId Int
+
     category   Category @relation(fields: [categoryId], references: [id])
     categoryId Int
-
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-}
-
-model ProductState {
-    id       Int       @id @default(autoincrement())
-    name     String
-    products Product[]
 
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
@@ -167,11 +179,6 @@ enum OrderStatus {
     SUCCEEDED
     CANCELLED
 }
-
-// enum ProductState {
-//     NEW
-//     OLD
-// }
 
 enum UserRole {
     USER
